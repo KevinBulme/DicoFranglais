@@ -10,10 +10,19 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 
 export class AppComponent {
     name = 'DicoFranglais';
+    enableConsoleOutput = true;
 
     constructor() {}
 
   ngOnInit() {
-    console.log('Initial App State', this);
+    if(this.enableConsoleOutput){
+      console.log('Initial App State', this);  
+    }
+  }
+
+  logger(message: any, ...optionnalParameters: any[]) : void{
+    if(this.enableConsoleOutput){
+      console.log(message, optionnalParameters);    
+    }
   }
  }
