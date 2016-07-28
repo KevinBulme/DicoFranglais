@@ -1,5 +1,5 @@
 <ul class="translations">
-    <li *ngFor= "let translator of _Translations.translators"
+    <li *ngFor= "let translator of _translations.translators"
     [class.selected]="translator === _selectedTranslator"
     (click)="onSelect(translator)">
         {{translator.english}}
