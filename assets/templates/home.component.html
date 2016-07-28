@@ -1,16 +1,9 @@
-<h1>Expressions traduites</h1>
-<h2>Sérieuses</h2>
+<h2>Expressions traduites</h2>
 <ul class="translations">
-    <li *ngFor= "let translator of _seriousTranslations.translators"
+    <li *ngFor= "let translator of _Translations.translators"
+    [class.selected]="translator === _selectedTranslator"
     (click)="onSelect(translator)">
         {{translator.english}}
     </li>
 </ul>
-<h2>Ridicules</h2>
-<ul class="translations">
-    <li *ngFor= "let translator of _funnyTranslations.translators"
-    (click)="onSelect(translator)">
-        {{translator.english}}
-    </li>
-</ul>
-{{_selectedTranslator.english}}
+<my-translator-detail [translator]="_selectedTranslator"></my-translator-detail>

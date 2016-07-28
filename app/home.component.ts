@@ -2,25 +2,22 @@ import { Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { Translator } from './translator';
-import { SeriousTranslations } from './serious-translations';
-import { FunnyTranslations } from './funny-translations';
+import { Translations } from './translations';
+import { TranslatorDetailComponent } from './translator-detail.component'
 
 @Component({
   selector: 'home',
   styleUrls: ['assets/styles/home.component.css'],
-  templateUrl: 'assets/templates/home.component.html'
+  templateUrl: 'assets/templates/home.component.html',
+  directives: [TranslatorDetailComponent]
 })
 export class HomeComponent {
 
-  private _seriousTranslations: SeriousTranslations;
-  private _funnyTranslations: FunnyTranslations;
+  private _Translations: Translations;
   private _selectedTranslator: Translator;
 
   constructor(public app: AppComponent) {
-    this._seriousTranslations = new SeriousTranslations();
-    this._funnyTranslations = new FunnyTranslations();
-    this._selectedTranslator = new Translator();
-    this._selectedTranslator.english = "";
+    this._Translations = new Translations();
   }
 
   ngOnInit() {
