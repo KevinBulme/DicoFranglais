@@ -1,7 +1,19 @@
 {
-  "name": "angular2-quickstart",
-  "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "name": "DicoFranglais",
+  "version" : "0.0.1",
+  "description": "Dictionnaire pour traduire le franglais en français plus correct et moins impérialiste",
+  "keywords": [
+    "angular2",
+    "webpack",
+    "typescript",
+    "dictionnary",
+    "french",
+    "english",
+    "translation"
+],
+  "author": "Kévin Bulmé",
+  "homepage": "https://github.com/KevinBulme/",
+  "license": "MIT",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "docker-build": "docker build -t ng2-quickstart .",
@@ -18,9 +30,6 @@
     "typings": "typings",
     "webdriver:update": "webdriver-manager update"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@angular/common":  "2.0.0-rc.4",
     "@angular/compiler":  "2.0.0-rc.4",
@@ -61,5 +70,15 @@
     "protractor": "^3.3.0",
     "rimraf": "^2.5.2"
   },
-  "repository": {}
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/KevinBulme/DicoFranglais.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KevinBulme/DicoFranglais/issues"
+  },
+  "engines": {
+    "node": ">= 5",
+    "npm": ">= 3"
+  }
 }
