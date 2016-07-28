@@ -5,8 +5,6 @@ import { Translator } from './translator';
 import { SeriousTranslations } from './serious-translations';
 import { FunnyTranslations } from './funny-translations';
 
-console.log('`HomeComponent` component loaded asynchronously');
-
 @Component({
   selector: 'home',
   styleUrls: ['assets/styles/home.component.css'],
@@ -26,12 +24,12 @@ export class HomeComponent {
   }
 
   ngOnInit() {
-    console.log('hello `HomeComponent` component', this);
+    this.app.logger('hello `HomeComponent` component', this);
   }
 
   onSelect(translator: Translator){
     this._selectedTranslator = translator;
-    //console.log("selectedTranslator : ", this._selectedTranslator);
+    this.app.logger("selectedTranslator : ", this._selectedTranslator);
   }
 
 }
