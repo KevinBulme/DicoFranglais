@@ -1,5 +1,16 @@
-<div>
-    <p>
-        Bienvenue sur HomeComponent.
-    </p>
-</div>
+<h1>Expressions traduites</h1>
+<h2>Sérieuses</h2>
+<ul>
+    <li *ngFor= "let translator of _seriousTranslations.translators"
+    (click)="onSelect(translator)">
+        <span class="badge">{{translator.english}}</span>
+    </li>
+</ul>
+<h2>Ridicules</h2>
+<ul>
+    <li *ngFor= "let translator of _funnyTranslations.translators"
+    (click)="onSelect(translator)">
+        <span class="badge">{{translator.english}}</span>
+    </li>
+</ul>
+{{_selectedTranslator.english}}
