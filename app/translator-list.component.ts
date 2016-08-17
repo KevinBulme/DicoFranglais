@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { Translator } from './translator';
+import { Translator, Type } from './translator';
 import { Translations } from './translations';
 import { TranslatorDetailComponent } from './translator-detail.component'
 import { Pagination, Page } from './pagination';
@@ -18,7 +18,8 @@ export class TranslatorListComponent {
   private _selectedTranslator: Translator;
   private _pagination: Pagination;
   private _selectedPage: Page;
-  private _letter: string = "Tous";
+  private _letter: string = "All";
+  private _hiddenType: Type;
 
   constructor(public app: AppComponent) {
     this._translations = new Translations();
@@ -47,6 +48,7 @@ export class TranslatorListComponent {
   onSelectLetter(page: Page){
     this._translations.translators = page.translations;
     this._letter = page.letter;
+    this._selectedTranslator = null;
   }
 
   onSelectAll(){
@@ -59,11 +61,28 @@ export class TranslatorListComponent {
         this._translations.translators = this._translations.translators.concat(page.translations);
       }
     });
-    this._letter = "Tous";
+    this._letter = "All";
+    this._selectedTranslator = null;
   }
 
   reverseTranslations(){
     this._translations.translators.reverse();
+  }
+
+  onSelectHiddenType(type: string){
+    switch(type){
+
+      case "Funny":
+        this._hiddenType = Type.Funny;
+        break;
+
+      case "Serious":
+        this._hiddenType = Type.Serious;
+        break;
+
+      default:
+        this._hiddenType = null;
+    }
   }
 
 }
