@@ -5,17 +5,17 @@ import { AboutComponent }  from './about.component' ;
 
 const routes: RouterConfig = [
   { 
-    path: 'home',
+    path: 'traductions',
     component: HomeComponent
   },
   { 
-    path: 'about',
+    path: 'a-propos',
     component: AboutComponent
   },
   //Redirects 404s to Home
   { 
     path: '**',
-    redirectTo: '/home'
+    redirectTo: '/traductions'
   }
 ];
 
