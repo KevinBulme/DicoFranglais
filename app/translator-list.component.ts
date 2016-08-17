@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { Translator } from './translator';
 import { Translations } from './translations';
 import { TranslatorDetailComponent } from './translator-detail.component'
-import { Pagination } from './pagination';
+import { Pagination, Page } from './pagination';
 
 @Component({
   selector: 'translator-list',
@@ -17,6 +17,7 @@ export class TranslatorListComponent {
   private _translations: Translations;
   private _selectedTranslator: Translator;
   private _pagination: Pagination;
+  private _selectedPage: Page;
 
   constructor(public app: AppComponent) {
     this._translations = new Translations();
@@ -25,7 +26,7 @@ export class TranslatorListComponent {
 
   ngOnInit() {
     this.fillPagination();
-    this.app.logger('hello `TranslatorListComponent` component', this);
+    this.app.logger('hello `TranslatorListComponent` component');
   }
 
   fillPagination(){
@@ -38,7 +39,11 @@ export class TranslatorListComponent {
 
   onSelect(translator: Translator){
     this._selectedTranslator = translator;
-    this.app.logger("selectedTranslator : ", this._selectedTranslator);
+  }
+
+  onSelectLetter(page: Page){
+    this._selectedPage = page;
+    this._translations.translators = page.translations;
   }
 
 }

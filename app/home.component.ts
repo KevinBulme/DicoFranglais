@@ -16,7 +16,7 @@ export class HomeComponent {
   }
 
   ngOnInit() {
-    this.app.logger('hello `HomeComponent` component', this);
+    this.app.logger('hello `HomeComponent` component');
   }
 
 }

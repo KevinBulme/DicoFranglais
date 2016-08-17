@@ -32,8 +32,6 @@ export class Pagination {
 
     addTranslator(translator: Translator) {
         let firstLetter: string = translator.english.substr(0,1);
-        console.log(firstLetter);
-        console.log(this.getPageIndex(firstLetter));
         this.pages[this.getPageIndex(firstLetter)].translations.push(translator);
     }
 }
