@@ -6,7 +6,16 @@
     {{page.letter}}
   </a>
   </li>
+  <li (click)="onSelectAll()">
+    <a [class.active]="'Tous' === _letter">
+     Tous
+    </a>
+  </li>
 </ul>
+
+<button (click)="reverseTranslations()">Inverser</button>
+
+<my-translator-detail [translator]="_selectedTranslator"></my-translator-detail>
 
 <ul class="translations">
     <li *ngFor= "let translator of _translations.translators"
@@ -15,4 +24,3 @@
         {{translator.english}}
     </li>
 </ul>
-<my-translator-detail [translator]="_selectedTranslator"></my-translator-detail>

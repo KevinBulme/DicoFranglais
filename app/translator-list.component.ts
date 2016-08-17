@@ -18,6 +18,7 @@ export class TranslatorListComponent {
   private _selectedTranslator: Translator;
   private _pagination: Pagination;
   private _selectedPage: Page;
+  private _letter: string = "Tous";
 
   constructor(public app: AppComponent) {
     this._translations = new Translations();
@@ -35,6 +36,8 @@ export class TranslatorListComponent {
       for(i = 0 ; i < translationsLength ; i++){
           this._pagination.addTranslator(this._translations.translators[i]);
       }
+      this._pagination.pages.forEach(page => page.translations = page.translations.sort(function(a, b){return a.english.localeCompare(b.english)}));
+      this.onSelectAll();
   }
 
   onSelect(translator: Translator){
@@ -42,8 +45,25 @@ export class TranslatorListComponent {
   }
 
   onSelectLetter(page: Page){
-    this._selectedPage = page;
     this._translations.translators = page.translations;
+    this._letter = page.letter;
+  }
+
+  onSelectAll(){
+    let i: number;
+    this._translations.translators = [];
+    this._pagination.pages.forEach( page => {
+      if(this._translations.translators.length === 0){
+        this._translations.translators = page.translations;
+      }else{
+        this._translations.translators = this._translations.translators.concat(page.translations);
+      }
+    });
+    this._letter = "Tous";
+  }
+
+  reverseTranslations(){
+    this._translations.translators.reverse();
   }
 
 }
