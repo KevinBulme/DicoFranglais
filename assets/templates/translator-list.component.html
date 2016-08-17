@@ -1,0 +1,31 @@
+<ul class="letters">
+  <li *ngFor= "let page of _pagination.pages"
+  (click)="onSelectLetter(page)"
+  [class.hide]="page.translations.length == 0">
+  <a [class.active]="page.letter === _letter">
+    {{page.letter}}
+  </a>
+  </li>
+  <li (click)="onSelectAll()">
+    <a [class.active]="'All' === _letter">
+     Tous
+    </a>
+  </li>
+</ul>
+
+Filtres :
+<button (click)="reverseTranslations()">Inverser</button>
+<input type="radio" name="typeFilter" (click)="onSelectHiddenType('Funny')">Sérieux
+<input type="radio" name="typeFilter" (click)="onSelectHiddenType('Serious')">Non sérieux
+<input type="radio" name="typeFilter" (click)="onSelectHiddenType('All')" checked>Tous confondus
+
+<my-translator-detail [translator]="_selectedTranslator"></my-translator-detail>
+
+<ul class="translations">
+    <li *ngFor= "let translator of _translations.translators"
+    [class.selected]="translator === _selectedTranslator"
+    [class.hide]="translator.type.toString() == _hiddenType"
+    (click)="onSelect(translator)">
+        {{translator.english}}
+    </li>
+</ul>

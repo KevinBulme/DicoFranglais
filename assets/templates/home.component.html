@@ -1,9 +1,2 @@
 <h2>Expressions traduites</h2>
-<ul class="translations">
-    <li *ngFor= "let translator of _Translations.translators"
-    [class.selected]="translator === _selectedTranslator"
-    (click)="onSelect(translator)">
-        {{translator.english}}
-    </li>
-</ul>
-<my-translator-detail [translator]="_selectedTranslator"></my-translator-detail>
+<translator-list></translator-list>
