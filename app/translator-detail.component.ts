@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Translator } from './translator';
 
@@ -10,4 +10,14 @@ import { Translator } from './translator';
 export class TranslatorDetailComponent {
   @Input()
   translator: Translator;
+
+  @Output()
+  onHide = new EventEmitter<boolean>();
+
+  show = true;
+
+  hide(){
+    this.onHide.emit(true);
+    this.show = false;
+  }
 }

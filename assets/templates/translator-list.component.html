@@ -13,13 +13,15 @@
   </li>
 </ul>
 
-Filtres :
-<button (click)="reverseTranslations()">Inverser</button>
-<input type="radio" name="typeFilter" (click)="onSelectHiddenType('Funny')">Sérieux
-<input type="radio" name="typeFilter" (click)="onSelectHiddenType('Serious')">Non sérieux
-<input type="radio" name="typeFilter" (click)="onSelectHiddenType('All')" checked>Tous confondus
+<div class="filters">
+  Filtres :
+  <button (click)="reverseTranslations()">Inverser</button>
+  <input type="radio" name="typeFilter" (click)="onSelectHiddenType('Funny')"><span>Les sérieux</span>
+  <input type="radio" name="typeFilter" (click)="onSelectHiddenType('Serious')"><span>Les moins sérieux</span>
+  <input type="radio" name="typeFilter" (click)="onSelectHiddenType('All')" checked><span>Tous confondus</span>
+</div>
 
-<my-translator-detail [translator]="_selectedTranslator"></my-translator-detail>
+<my-translator-detail [translator]="_selectedTranslator" (onHide)="onHide($event)"></my-translator-detail>
 
 <ul class="translations">
     <li *ngFor= "let translator of _translations.translators"
