@@ -1,1 +1,35 @@
+.title {
+    padding-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    vertical-align: center;
+}
+
+.title h1 {
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+.main-menu {
+    margin: 15px -10px 0px -10px;
+    background-color: #FCF0E4;
+    height: 30px;
+}
+
+.main-menu a {
+    margin-top: 0px;
+}
+
+div.white-strip{
+    height: 30px;
+    margin: 15px -10px 15px -10px;
+    background-color: #FCF0E4;
+}
+
+header {
+    background-color: #848C77;
+    margin: 0px -10px 0px -10px;
+    height: 120px;
+}
 
