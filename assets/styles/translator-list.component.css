@@ -1,5 +1,5 @@
 .translations {
-    margin: 0 0 2em 0;
+    margin: 22 0 2em 0;
     list-style-type: none;
     padding: 0;
     width: 15em;
@@ -9,21 +9,22 @@
     cursor: pointer;
     position: relative;
     left: 0;
-    background-color: #EEE;
+    background-color: #FCF0E4;
     margin: .5em;
     padding: .3em 0;
     padding-left: 10px;
+    padding-top: 11px;
     height: 1.6em;
     border-radius: 4px;
 }
 
 .translations li.selected:hover {
-    background-color: #BBD8DC !important;
-    color: white;
+    color: #FFFFFF;
+    background-color: #848C77;
 }
-.translations li:hover {
-    color: #607D8B;
-    background-color: #DDD;
+.translations li:hover, .translations li.selected {
+    color: #BF6565;
+    background-color: #FCF0E4;
     left: .1em;
 }
 .translations .text {
@@ -33,9 +34,12 @@
 
 ul.letters {
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto 0 auto;
     padding: 0;
     overflow: hidden;
+    text-align: center;
+    max-width: 1180px;
+    width: 151px;
 }
 
 .letters li {
@@ -50,10 +54,18 @@ ul.letters {
 }
 
 .letters li:hover a, .letters .active {
-    color: #039be5;
+    color: #395B82;
 }
 
 .hide {
     display: none;
+}
+
+.filters span {
+    margin-right: 10px;
+}
+
+.filters button:hover {
+    color: #395B82;
 }
 

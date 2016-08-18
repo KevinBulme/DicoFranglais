@@ -1,6 +1,16 @@
-<h1>Dictionnaire Franglais</h1>
-<nav>
-    <a routerLink="/traductions" routerLinkActive="active">Traductions</a>
-    <a routerLink="/a-propos" routerLinkActive="active">A propos</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="app" scrollSpy>
+    <div class="white-strip"></div>
+    <header>
+        <div class="title" scrollSpyAffix >
+            <h1>Dictionnaire Franglais</h1>
+        </div>
+    </header>
+    <div class="main-menu">
+        <nav class="nav">
+            <a routerLink="/traductions" routerLinkActive="active">Traductions</a>
+            <a routerLink="/a-propos" routerLinkActive="active">A propos</a>
+        </nav>
+    </div>
+
+    <router-outlet></router-outlet>
+</div>

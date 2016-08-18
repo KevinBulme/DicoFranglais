@@ -1,11 +1,11 @@
-<div *ngIf="translator">
+<div *ngIf="translator" class="details">
+    <div class="close" (click)="hide()"></div>
     <h2>{{translator.english}}</h2>
-    <div>
-    <label>Traduction : </label>
-    {{translator.french}}
+    <div class="french">
+        {{translator.french}}
     </div>
     <div class="author">
-    <label>Proposé par : </label>
-    {{translator.author}}
+        <label>Proposé par : </label>
+        {{translator.author}}
     </div>
 </div>

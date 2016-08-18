@@ -85,4 +85,10 @@ export class TranslatorListComponent {
     }
   }
 
+  onHide(hide: boolean){
+    if(hide){
+      this._selectedTranslator = null;
+    }
+  }
+
 }
