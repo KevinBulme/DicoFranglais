@@ -7,8 +7,8 @@
     </header>
     <div class="main-menu">
         <nav class="nav">
-            <a routerLink="/traductions" routerLinkActive="active">Traductions</a>
-            <a routerLink="/a-propos" routerLinkActive="active">A propos</a>
+            <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./traductions']">Traductions</a>
+            <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./a-propos']">A propos</a>
         </nav>
     </div>
 

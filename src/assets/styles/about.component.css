@@ -7,3 +7,8 @@
     padding: 1px 10px 10px 10px;
     border-radius: 12px;
 }
+
+.about a {
+    text-decoration: none;
+    color: #F58851;
+}
