@@ -38,10 +38,11 @@ import { ngApp } from './main.node';
 // Routes with html5pushstate
 // ensure routes match client-side-app
 app.get('/', ngApp);
-app.get('/about', ngApp);
-app.get('/about/*', ngApp);
-app.get('/home', ngApp);
-app.get('/home/*', ngApp);
+app.get('/traductions', ngApp);
+app.get('/traductions/*', ngApp);
+app.get('/a-propos', ngApp);
+app.get('/a-propos/*', ngApp);
+app.get('**', ngApp);
 
 // use indexFile over ngApp only when there is too much load on the server
 function indexFile(req, res) {
@@ -50,12 +51,12 @@ function indexFile(req, res) {
   res.sendFile('/index.html', {root: __dirname});
 }
 
-app.get('*', function(req, res) {
+/*app.get('*', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
   var pojo = { status: 404, message: 'No Content' };
   var json = JSON.stringify(pojo, null, 2);
   res.status(404).send(json);
-});
+});*/
 
 // Server
 let server = app.listen(process.env.PORT || 3000, () => {
