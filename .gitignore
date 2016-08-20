@@ -1,18 +1,10 @@
-.idea
-typings/**
-node_modules
-jspm_packages
-link-checker-results.txt
-**/*npm-debug.log.*
-*.js
-*.js.map
-e2e/**/*.js
-e2e/**/*.js.map
-_test-output
-_temp
+/__build__
+/__server_build__
+/node_modules
+/typings
+/tsd_typings/
+npm-debug.log
 
-!karma*.js
-!protractor*.js
-!systemjs.config.js
-!typings/typings.d.ts
-!wallaby.js
+/dist/
+
+.idea

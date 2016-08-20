@@ -1,0 +1,11 @@
+{
+  "name": "DicoFranglais",
+  "description": "Dictionnaire pour traduire le franglais en français plus correct et moins impérialiste",
+  "repository": "https://github.com/KevinBulme/DicoFranglais.git",
+  "env": {
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "Install `webpack` and other development modules when deploying to allow full builds.",
+      "value": "false"
+    }
+  }
+}

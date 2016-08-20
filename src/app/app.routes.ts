@@ -1,9 +1,8 @@
-import { provideRouter, RouterConfig } from '@angular/router';
-
+import { RouterConfig } from '@angular/router';
 import { HomeComponent }  from './home.component' ;
 import { AboutComponent }  from './about.component' ;
 
-const routes: RouterConfig = [
+export const routes: RouterConfig = [
   { 
     path: 'traductions',
     component: HomeComponent
@@ -17,8 +16,4 @@ const routes: RouterConfig = [
     path: '**',
     redirectTo: '/traductions'
   }
-];
-
-export const appRouterProviders = [
-  provideRouter(routes)
 ];

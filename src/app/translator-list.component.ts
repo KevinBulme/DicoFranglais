@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { App } from './app.component';
 import { Translator, Type } from './translator';
 import { Translations } from './translations';
 import { TranslatorDetailComponent } from './translator-detail.component'
@@ -8,8 +8,8 @@ import { Pagination, Page } from './pagination';
 
 @Component({
   selector: 'translator-list',
-  styleUrls: ['assets/styles/translator-list.component.css'],
-  templateUrl: 'assets/templates/translator-list.component.html',
+  styleUrls: ['../assets/styles/translator-list.component.css'],
+  templateUrl: '../assets/templates/translator-list.component.html',
   directives: [TranslatorDetailComponent]
 })
 export class TranslatorListComponent {
@@ -21,7 +21,7 @@ export class TranslatorListComponent {
   private _letter: string = "All";
   private _hiddenType: Type;
 
-  constructor(public app: AppComponent) {
+  constructor(public app: App) {
     this._translations = new Translations();
     this._pagination = new Pagination();
   }
