@@ -6,7 +6,27 @@ const TRANSLATORS: Translator[] = [
     { english: "smartphone", french: "ordiphone", type: Type.Serious, author: "Anonyme"},
     { english: "secured shell", french: "coquillage sécurisé", type: Type.Funny, author: "Anonyme"},
     { english: "fanzone", french: "zone des ventilateurs", type: Type.Funny, author: "Anonyme"},
-    { english: "selfie", french: "ego-portrait", type: Type.Serious, author: "Bebe Dino"}
+    { english: "selfie", french: "ego-portrait", type: Type.Serious, author: "Bébé Dino"},
+    { english: "post", french: "billet", type: Type.Serious, author: "Sylvie"},
+    { english: "customiser", french: "personnaliser", type: Type.Serious, author: "Sylvie"},
+    { english: "pitch", french: "résumé", type: Type.Serious, author: "Sylvie"},
+    { english: "legging", french: "caleçon", type: Type.Serious, author: "Sylvie"},
+    { english: "caddie", french: "chariot", type: Type.Serious, author: "Sylvie"},
+    { english: "prime-time", french: "première partie de soirée", type: Type.Funny, author: "Sylvie"},
+    { english: "goal average", french: "moyenne de buts", type: Type.Funny, author: "Sylvie"},
+    { english: "fun", french: "amusant", type: Type.Serious, author: "Sylvie"},
+    { english: "chill", french: "posé", type: Type.Serious, author: "Kévin"},
+    { english: "week-end", french: "samanche", type: Type.Serious, author: "Sylvie"},
+    { english: "sandwich", french: "sable sorcière", type: Type.Funny, author: "Kévin"},
+    { english: "brunch", french: "déjeunette", type: Type.Serious, author: "Académie Française"},
+    { english: "chewing-gum", french: "rumino-gomme", type: Type.Serious, author: "Sylvie"},
+    { english: "shopping", french: "emplettes", type: Type.Serious, author: "Sylvie"},
+    { english: "ok", french: "entendu", type: Type.Serious, author: "Sylvie"},
+    { english: "camping", french: "hôtellerie de plein air", type: Type.Serious, author: "Sylvie"},
+    { english: "lifting", french: "derma-tension", type: Type.Serious, author: "Kévin"},
+    { english: "best-seller", french: "meilleure vente", type: Type.Serious, author: "Sylvie"},
+    { english: "block-buster", french: "exploseur de block", type: Type.Funny, author: "Kévin"},
+    { english: "blazer", french: "veste de complet-veston", type: Type.Serious, author: "Sylvie"}
 ];
 
 export class Translations {

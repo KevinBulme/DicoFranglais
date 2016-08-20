@@ -4,6 +4,10 @@ import { AboutComponent }  from './about.component' ;
 
 export const routes: RouterConfig = [
   { 
+    path: '',
+    redirectTo: 'traductions',
+    pathMatch: 'full' },
+  { 
     path: 'traductions',
     component: HomeComponent
   },
@@ -14,6 +18,6 @@ export const routes: RouterConfig = [
   //Redirects 404s to Home
   { 
     path: '**',
-    redirectTo: '/traductions'
+    redirectTo: 'traductions'
   }
 ];
