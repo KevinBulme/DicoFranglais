@@ -26,7 +26,22 @@ const TRANSLATORS: Translator[] = [
     { english: "lifting", french: "derma-tension", type: Type.Serious, author: "Kévin"},
     { english: "best-seller", french: "meilleure vente", type: Type.Serious, author: "Sylvie"},
     { english: "block-buster", french: "exploseur de block", type: Type.Funny, author: "Kévin"},
-    { english: "blazer", french: "veste de complet-veston", type: Type.Serious, author: "Sylvie"}
+    { english: "blazer", french: "veste de complet-veston", type: Type.Serious, author: "Sylvie"},
+    { english: "cloud", french: "nuage", type: Type.Serious, author: "Wahou"},
+    { english: "business", french: "procédure d'entreprise", type: Type.Serious, author: "Wahou"},
+    { english: "big data", french: "grosse donnée", type: Type.Serious, author: "Wahou"},
+    { english: "data mining", french: "fouille de données", type: Type.Serious, author: "Wahou"},
+    { english: "parking", french: "parc de stationnement", type: Type.Serious, author: "Wahou"},
+    { english: "apple", french: "pomme", type: Type.Serious, author: "Wahou"},
+    { english: "microsoft", french: "minuscule doux", type: Type.Funny, author: "Wahou"},
+    { english: "google", french: "10¹⁰⁰ mal écrit", type: Type.Funny, author: "Wahou"},
+    { english: "firefox", french: "feunard", type: Type.Funny, author: "Wahou"},
+    { english: "open source", french: "source ouverte", type: Type.Funny, author: "Nicolas Bonfante"},
+    { english: "deep web", french: "toile profonde", type: Type.Serious, author: "Nicolas Bonfante"},
+    { english: "web", french: "toile", type: Type.Serious, author: "Nicolas Bonfante"},
+    { english: "mail", french: "courriel", type: Type.Serious, author: "Nicolas Bonfante"},
+    { english: "email", french: "mél", type: Type.Serious, author: "Nicolas Bonfante"},
+    { english: "issue", french: "remarque", type: Type.Serious, author: "Guillaume Cren"}
 ];
 
 export class Translations {
