@@ -1,8 +1,7 @@
 .translations {
-    margin: 22 0 2em 0;
+    margin: 22px 0px 2em 0px;
     list-style-type: none;
     padding: 0;
-    width: 15em;
 }
 
 .translations li {
@@ -16,6 +15,8 @@
     padding-top: 11px;
     height: 1.6em;
     border-radius: 4px;
+    float: left;
+    width: 180px;
 }
 
 .translations li.selected:hover {
