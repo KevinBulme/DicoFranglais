@@ -3,6 +3,8 @@ Dictionnaire pour traduire le franglais en français plus correct et moins impé
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+[Voir en fonctionnement](https://dico-franglais.herokuapp.com) 
+
 ## Installation
 
 * `npm install`
